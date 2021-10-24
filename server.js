@@ -1,10 +1,18 @@
 const express = require('express'); // importa o express
-
 const server = express(); // cria uma variável chamada server que chama a função express
 
-server.get('/', (req, res) => {
-    return res.sendFile('/Users/dmbrasil/Documents/tag-patient/index.html');
-}) // Cria a rota /teste com o método GET, o console.log retornará no terminal ‘teste’ caso tenha executado com sucesso.
+var path = __dirname + '/public';
+
+var router = express.Router();
+
+server.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
+server.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+server.use(express.static(__dirname + '/public'));
+server.use('/',router);
+
+router.get('/', function(req, res) {
+    res.sendFile(path+'/index.html');
+});
 
 server.get('/health', (req, res) => {
     return res.sendFile( { message: 'Hello world' });
