@@ -1,0 +1,383 @@
+[
+    {
+        "id": "dfdc35c6e6850f50",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b520fbb5b032c5dd",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "e1fc471b3c25cf9e",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "ced4027cfa25f376",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "e98f199b89795cae",
+        "type": "websocket-listener",
+        "z": "ced4027cfa25f376",
+        "path": "/ws/simple",
+        "wholemsg": "false"
+    },
+    {
+        "id": "e0257d577a4a896c",
+        "type": "websocket-listener",
+        "z": "e1fc471b3c25cf9e",
+        "path": "/ws/simple",
+        "wholemsg": "false"
+    },
+    {
+        "id": "985ecbc7.67a138",
+        "type": "websocket-listener",
+        "z": "e1fc471b3c25cf9e",
+        "path": "/ws/simple",
+        "wholemsg": "false"
+    },
+    {
+        "id": "10fb99d3882ac7ac",
+        "type": "websocket-listener",
+        "z": "dfdc35c6e6850f50",
+        "path": "/ws/simple",
+        "wholemsg": "false"
+    },
+    {
+        "id": "08bf76aaa7dea949",
+        "type": "serial-port",
+        "serialport": "/dev/cu.usbmodem141301",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "86bfdb1e1c5a5d60",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fd51fd0a15b154ca",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6f60b1b1dda88806",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "86bfdb1e1c5a5d60",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2b38c09fee1dd1fe",
+        "type": "sqlitedb",
+        "db": "/tmp/patients",
+        "mode": "RWC"
+    },
+    {
+        "id": "bf44f9712e202d23",
+        "type": "websocket out",
+        "z": "dfdc35c6e6850f50",
+        "name": "",
+        "server": "10fb99d3882ac7ac",
+        "client": "",
+        "x": 730,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6d079e1164d49c44",
+        "type": "http response",
+        "z": "dfdc35c6e6850f50",
+        "name": "",
+        "x": 701,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "cf50675832879c59",
+        "type": "http in",
+        "z": "dfdc35c6e6850f50",
+        "name": "",
+        "url": "/simple",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 332,
+        "y": 240,
+        "wires": [
+            [
+                "f66fb05ca313df9e"
+            ]
+        ]
+    },
+    {
+        "id": "f66fb05ca313df9e",
+        "type": "template",
+        "z": "dfdc35c6e6850f50",
+        "name": "Simple Web Page",
+        "field": "payload",
+        "format": "html",
+        "template": "<!DOCTYPE HTML>\n<html>\n    <head>\n    <title>Simple Live Display</title>\n    <script type=\"text/javascript\">\n        var ws;\n        var wsUri = \"ws:\";\n        var loc = window.location;\n        console.log(loc);\n        if (loc.protocol === \"https:\") { wsUri = \"wss:\"; }\n        // This needs to point to the web socket in the Node-RED flow\n        // ... in this case it's ws/simple\n        wsUri += \"//\" + loc.host + loc.pathname.replace(\"simple\",\"ws/simple\");\n\n        function wsConnect() {\n            console.log(\"connect\",wsUri);\n            ws = new WebSocket(wsUri);\n            //var line = \"\";    // either uncomment this for a building list of messages\n            ws.onmessage = function(msg) {\n                var line = \"\";  // or uncomment this to overwrite the existing message\n                // parse the incoming message as a JSON object\n                var data = msg.data;\n                //console.log(data);\n                // build the output from the topic and payload parts of the object\n                line += \"<p>\"+data+\"</p>\";\n                // replace the messages div with the new \"line\"\n                document.getElementById('messages').innerHTML = line;\n                //ws.send(JSON.stringify({data:data}));\n            }\n            ws.onopen = function() {\n                // update the status div with the connection status\n                document.getElementById('status').innerHTML = \"connected\";\n                //ws.send(\"Open for data\");\n                console.log(\"connected\");\n            }\n            ws.onclose = function() {\n                // update the status div with the connection status\n                document.getElementById('status').innerHTML = \"not connected\";\n                // in case of lost connection tries to reconnect every 3 secs\n                setTimeout(wsConnect,3000);\n            }\n        }\n        \n        function doit(m) {\n            if (ws) { ws.send(m); }\n        }\n    </script>\n    </head>\n    <body onload=\"wsConnect();\" onunload=\"ws.disconnect();\">\n        <font face=\"Arial\">\n        <h1>Simple Live Display</h1>\n        <div id=\"messages\"></div>\n        <button type=\"button\" onclick='doit(\"click\");'>Click to send message</button>\n        <hr/>\n        <div id=\"status\">unknown</div>\n        </font>\n    </body>\n</html>\n",
+        "x": 529,
+        "y": 240,
+        "wires": [
+            [
+                "6d079e1164d49c44"
+            ]
+        ]
+    },
+    {
+        "id": "788c60705ca04104",
+        "type": "websocket in",
+        "z": "dfdc35c6e6850f50",
+        "name": "",
+        "server": "10fb99d3882ac7ac",
+        "client": "",
+        "x": 517,
+        "y": 352,
+        "wires": [
+            [
+                "e740025d62990136"
+            ]
+        ]
+    },
+    {
+        "id": "e740025d62990136",
+        "type": "debug",
+        "z": "dfdc35c6e6850f50",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 707,
+        "y": 352,
+        "wires": []
+    },
+    {
+        "id": "70fc81d3521ae506",
+        "type": "serial in",
+        "z": "dfdc35c6e6850f50",
+        "name": "",
+        "serial": "08bf76aaa7dea949",
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "64b3f6042345fab0"
+            ]
+        ]
+    },
+    {
+        "id": "2bd13aa495343341",
+        "type": "ui_text",
+        "z": "dfdc35c6e6850f50",
+        "group": "6f60b1b1dda88806",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Coming from arduino",
+        "format": "{{msg.payload[\"diagnostics\"]}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 980,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "cc085e3b0c615bcc",
+        "type": "function",
+        "z": "dfdc35c6e6850f50",
+        "name": "Get patient",
+        "func": "const data = [\n    {\n        \"rfid\": \"DE1224F1Z3\",\n        \"name\": \"Vitor Ferreira\",\n        \"diagnostics\": {\n            \"blood_type\": \"A+\"\n        },\n        \"history\": {\n            \"medic\": \"José Doe\",\n            \"specialty\": \"Otorrinolaringologista\",\n            \"date\": \"12/01/2022\",\n            \"time\": \"14:00\"\n        }\n    }];\nmsg.payload = data[0];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "64b3f6042345fab0",
+        "type": "function",
+        "z": "dfdc35c6e6850f50",
+        "name": "",
+        "func": "const data = [\n    {\n        \"rfid\": \"DE1224F1Z3\",\n        \"name\": \"Vitor Ferreira\",\n        \"diagnostics\": {\n            \"blood_type\": \"A+\"\n        },\n        \"history\": {\n            \"medic\": \"José Doe\",\n            \"specialty\": \"Otorrinolaringologista\",\n            \"date\": \"12/01/2022\",\n            \"time\": \"14:00\"\n        }\n    }];\nmsg.payload = \"tau\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 560,
+        "wires": [
+            [
+                "2bd13aa495343341",
+                "bf44f9712e202d23",
+                "a3f70b4b6baf7f0f"
+            ]
+        ]
+    },
+    {
+        "id": "a3f70b4b6baf7f0f",
+        "type": "ui_text",
+        "z": "dfdc35c6e6850f50",
+        "group": "6f60b1b1dda88806",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Coming from arduino 2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 990,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "601634d82c08158f",
+        "type": "sqlite",
+        "z": "dfdc35c6e6850f50",
+        "mydb": "2b38c09fee1dd1fe",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Patients DB",
+        "x": 400,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    }
+]

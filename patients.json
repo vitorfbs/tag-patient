@@ -1,0 +1,15 @@
+[
+    {
+        "rfid": "DE1224F1Z3",
+        "name": "Vitor Ferreira",
+        "diagnostics": {
+            "blood_type": "A+"
+        },
+        "history": {
+            "medic": "José Doe",
+            "specialty": "Otorrinolaringologista",
+            "date": "12/01/2022",
+            "time": "14:00"
+        }
+    }
+]
