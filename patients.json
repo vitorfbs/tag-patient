@@ -11,5 +11,31 @@
             "date": "12/01/2022",
             "time": "14:00"
         }
+    },
+    {
+        "rfid": "DE1224F1Z1",
+        "name": "Vinicius Marino",
+        "diagnostics": {
+            "blood_type": "A+"
+        },
+        "history": {
+            "medic": "Joana Doe",
+            "specialty": "Dentista",
+            "date": "12/01/2022",
+            "time": "14:00"
+        }
+    },
+    {
+        "rfid": "DE1224F1Z4",
+        "name": "Regis Ximendes",
+        "diagnostics": {
+            "blood_type": "A+"
+        },
+        "history": {
+            "medic": "Van Helsing",
+            "specialty": "Neurologista",
+            "date": "12/01/2022",
+            "time": "14:00"
+        }
     }
 ]

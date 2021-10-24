@@ -24,7 +24,6 @@
                 // build the output from the topic and payload parts of the object
                 line += "<p>"+data+"</p>";
                 // replace the messages div with the new "line"
-                document.getElementById('rfid').innerHTML = data["rfid"];
                 document.getElementById('name').innerHTML = data["name"];
                 //ws.send(JSON.stringify({data:data}));
             }
@@ -51,8 +50,8 @@
         <font face="Arial">
         <h1>Simple Live Display</h1>
         <div id="messages"></div>
-        <div id="rfid"></div>
         <div id="name"></div>
+        <div id="status"></div>
         </font>
     </body>
 </html>
