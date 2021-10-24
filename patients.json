@@ -2,6 +2,7 @@
     {
         "rfid": "DE1224F1Z3",
         "name": "Vitor Ferreira",
+        "gender": "Masculino",
         "diagnostics": {
             "blood_type": "A+"
         },
@@ -15,6 +16,7 @@
     {
         "rfid": "DE1224F1Z1",
         "name": "Vinicius Marino",
+        "gender": "Masculino",
         "diagnostics": {
             "blood_type": "A+"
         },
@@ -28,6 +30,7 @@
     {
         "rfid": "DE1224F1Z4",
         "name": "Regis Ximendes",
+        "gender": "Masculino",
         "diagnostics": {
             "blood_type": "A+"
         },
