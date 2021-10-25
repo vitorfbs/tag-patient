@@ -98,11 +98,11 @@
         "z": "dfdc35c6e6850f50",
         "name": "Arduino Write",
         "serial": "5af6ece9874f80b1",
-        "x": 210,
+        "x": 190,
         "y": 360,
         "wires": [
             [
-                "56223988890c59ea"
+                "93d7f721ad4182e0"
             ]
         ]
     },
@@ -111,36 +111,17 @@
         "type": "function",
         "z": "dfdc35c6e6850f50",
         "name": "",
-        "func": "patients = JSON.parse(msg.payload);\n\n// msg.payload = msg.payload.replace(/(\\r\\n|\\n|\\r)/gm, \"\")\n\nmsg.payload = \"empty\";\n\nconsole.log(msg.payload);\nfor (var i = 0; i < patients.length; i++){\n    if (patients[i][\"rfid\"] === \"DE1224F1Z3\") {\n        msg.payload = patients[i];\n    }\n}\nconsole.log(msg.payload);\n\nreturn msg;\n",
+        "func": "var rfid = msg.payload.replace(/(\\r\\n|\\n|\\r)/gm, \"\");\nconsole.log(msg.payload);\n\npatients = [\n    {\n        \"rfid\": \"F37BC5F7\",\n        \"name\": \"Vitor Ferreira\",\n        \"gender\": \"Masculino\",\n        \"blood_type\": \"A+\",\n        \"history\": [\n            {\n                \"medic\": \"Doutor Estranho\",\n                \"specialty\": \"Otorrinolaringologista\",\n                \"date\": \"12/01/2022\",\n                \"time\": \"14:00\"\n            },\n            {\n                \"medic\": \"Doutor Destino\",\n                \"specialty\": \"Ortopedista\",\n                \"date\": \"05/07/2022\",\n                \"time\": \"11:00\"\n            }\n        ],\n        \"exams\": [\n            {\n                \"name\": \"Endoscopia por vídeo\",\n                \"file\": \"endoscopia.mpeg\",\n                \"date\": \"05/02/2012\"\n            },\n            {\n                \"name\": \"Biopsia tecido adiposo\",\n                \"file\" : \"biopsia.docx\",\n                \"date\": \"16/02/2012\"\n            },\n            {\n                \"name\": \"Examinação geral\",\n                \"file\" : \"consulta.pdf\",\n                \"date\": \"11/07/2019\"\n            }\n        ],\n        \"procedures\": [\n            {\n                \"name\": \"Remoção de cisto pilonidal\",\n                \"date\": \"09/02/2011\"\n            },\n            {\n                \"name\" : \"Correção de desvio de septo\",\n                \"date\": \"21/05/2020\"\n            }\n        ]\n    },\n    {\n        \"rfid\": \"EE97A1B5\",\n        \"name\": \"Vinicius Marino\",\n        \"gender\": \"Masculino\",\n        \"blood_type\": \"A-\",\n        \"history\": [\n            {\n                \"medic\": \"José Doe\",\n                \"specialty\": \"Otorrinolaringologista\",\n                \"date\": \"12/01/2022\",\n                \"time\": \"14:00\"\n            },\n            {\n                \"medic\": \"José Dornelli\",\n                \"specialty\": \"Otorrinolaringologista\",\n                \"date\": \"12/01/2022\",\n                \"time\": \"14:00\"\n            }\n        ],\n        \"exams\": [\n            {\n                \"name\": \"Endoscopia por vídeo\",\n                \"file\": \"endoscopia.mpeg\",\n                \"date\": \"05/02/2012\"\n            },\n            {\n                \"name\": \"Biopsia tecido adiposo\",\n                \"file\" : \"biopsia.docx\",\n                \"date\": \"16/02/2012\"\n            },\n            {\n                \"name\": \"Examinação geral\",\n                \"file\" : \"consulta.pdf\",\n                \"date\": \"11/07/2019\"\n            }\n        ],\n        \"procedures\": [\n            {\n                \"name\": \"Remoção de cisto pilonidal\",\n                \"date\": \"09/02/2011\"\n            },\n            {\n                \"name\" : \"Correção de desvio de septo\",\n                \"date\": \"21/05/2020\"\n            }\n        ]\n    },\n    {\n        \"rfid\": \"E3CFCBDE\",\n        \"name\": \"Régis Ximendes\",\n        \"gender\": \"Masculino\",\n        \"blood_type\": \"A+\",\n        \"history\": [\n            {\n                \"medic\": \"José Doe\",\n                \"specialty\": \"Otorrinolaringologista\",\n                \"date\": \"12/01/2022\",\n                \"time\": \"14:00\"\n            },\n            {\n                \"medic\": \"José Dornelli\",\n                \"specialty\": \"Otorrinolaringologista\",\n                \"date\": \"12/01/2022\",\n                \"time\": \"14:00\"\n            }\n        ],\n        \"exams\": [\n            {\n                \"name\": \"Endoscopia por vídeo\",\n                \"file\": \"endoscopia.mpeg\",\n                \"date\": \"05/02/2012\"\n            },\n            {\n                \"name\": \"Biopsia tecido adiposo\",\n                \"file\" : \"biopsia.docx\",\n                \"date\": \"16/02/2012\"\n            },\n            {\n                \"name\": \"Examinação geral\",\n                \"file\" : \"consulta.pdf\",\n                \"date\": \"11/07/2019\"\n            }\n        ],\n        \"procedures\": [\n            {\n                \"name\": \"Remoção de cisto pilonidal\",\n                \"date\": \"09/02/2011\"\n            },\n            {\n                \"name\" : \"Correção de desvio de septo\",\n                \"date\": \"21/05/2020\"\n            }\n        ]\n    }\n];\n\nfor (var i = 0; i < patients.length; i++){\n    if (patients[i][\"rfid\"] === rfid) {\n        msg.payload = patients[i];\n    }\n}\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
+        "x": 520,
         "y": 360,
         "wires": [
             [
                 "50da04b3.af25fc"
-            ]
-        ]
-    },
-    {
-        "id": "56223988890c59ea",
-        "type": "file in",
-        "z": "dfdc35c6e6850f50",
-        "name": "Patients Json",
-        "filename": "/Users/dmbrasil/Documents/tag-patient/patients.json",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "utf8",
-        "allProps": false,
-        "x": 400,
-        "y": 360,
-        "wires": [
-            [
-                "93d7f721ad4182e0"
             ]
         ]
     },
