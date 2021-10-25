@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "fiap-challenge-5f3be",
+  "private_key_id": "c6f04c0d0d349ade3c8d4bf1cdfa9237ed1d79f2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCPXrTwg/AMlso7\nPM4riDJLHRWjR0mk3EregDPKt6Vh4kuN15+Od/kSh8ENVGM3Gt3EgANjcdC4Z5fq\nkkakF3IyEMAnXTB1hOe/cDl/JXDZnvojQCkN8v80AKsq9K6Aza25VtytidNiT6Qs\n4UWHzN0bsM+mKlJBzzCcUnAO4rE5oS29tT/TvXS7I7UPnWCz97Mn1hVC3Z0RchnZ\nYt4gOpeJwUHjHv62ZV0oHIeAP3NRK0TZOnXm/eG0tM/3Fn4swcl57KRX2eftWhcc\n4FtEztCsAXJ6JPsKsjJZ7KumIoccDRMh5VJbtXIxkmTLVpVhQZEBAlthRiFF6zRh\nqNPzuxhRAgMBAAECggEAA9PF5cPH5TYjSOiLImtc2Fd66+RryVxeHUlz2H4FirLl\nTHCMoFuAiSeZljcB/QcZE3VNYdq4dSvCyO7FtvyvPjnnP0XEFOcK3rfquQOxWwXc\n7JL6ZZZujJ9V8mwcunCDKjbw5isPOwkgO1h6KDFmV6ZlLKzljD8xL4Md3a/chkrG\nd63VSx1fUTPwJOvrweNJMDOjrYapwYzv85hNpXc8cvzlMFOtlVPE1bOS/esW00wa\nvBrhQBLA/EW+z7ZSsL1f/AmrzPI/z2RQs4IiJ361t85l9zpeBUBb+yBUbDohTRaF\ngKSNsEpas0v+Eo1fcBvv27Hp8G5mI/vwLExLAUbbnwKBgQDFTtmzNVUQhnPWrHfV\nwLkTme4AdyYrccVS3OuDzzSSkOwMzGeGoKWcMUyMCJV+t9TarYDiP/XiQrHu4f6U\neR3l7bNoMQxb8xo05J+wAIkgLTRmk67P75M3mVXLJhOmAuhg7O6d89q0Qr5NKa7V\n+P15a4cSjMD+HFLqkDaowld0kwKBgQC6BG76cfkeivudlbF6lufXA6b7rShLU+wQ\nSqQX/aJPRgsabLQd345q7YixR82M8UppQx7bSWGKrBHK2MlsJL3m/8yvAGJ4fs3O\nyLO7WAvb4Qr59OY4Cd84SP6K9qYayuJSxv2Imno9gibuzK7+CcG4Ff2RzA6HRIHz\nTdRPZhZSCwKBgEoCrMh7HeBn/rWs1fqZIxNGLy9/ghLTx0ew1KsJo1fDArg+SCsI\nwXZYS7VPVvxEapRodqrngQ0RJXtMzFjXIa7ovd48X71x8AedJoU3fjhSnJBJn04i\nOJ+nZbYhH0erWY1Z8pvPJ99sFcQN+aYLktDj07PSlmX7K+MOm2IsG+//AoGBAJmu\nEAHZJ3eUW0xV38rn4aJB4jMLW77gFqdfAzLO2MmllIbASA5mI8Mzezr7l1ZaAp/0\nVAnXFj766bgsYjx2Hm4552CtcK0cFexA5DxjAWknA2p+abTicwiNRb6JB7Ia6+B3\nhf7VoSgv3vprICfA58quYE+Txmz6rGHWaxEtxkMBAoGADL3qaAp1uWK5ZEknaVVX\nF0kK7OOCkT4uv8gBgFEGqU1hEA6TcD8REHoDtXpmE+OH8Vcgca6lp/uwCH5ox5Ic\nEu7nOztxjfBSAyZ8CuwmeZ1NxYYZsR6U8z0ohQK9H0HV35ZMkIjAEf7xCUoccydi\nJKqy2ePryva6l/H4BHt4avw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "fiap-challenge-5f3be@appspot.gserviceaccount.com",
+  "client_id": "108739792777541660277",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/fiap-challenge-5f3be%40appspot.gserviceaccount.com"
+}
