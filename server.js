@@ -17,6 +17,10 @@ router.get('/', function(req, res) {
     res.sendFile(path+'/index.html');
 });
 
+router.get('/consultation', function(req, res) {
+    res.sendFile(path+'/consultation.html');
+});
+
 server.get('/health', (req, res) => {
     return res.sendFile( { message: 'Hello world' });
 })

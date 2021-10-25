@@ -20,12 +20,37 @@ function wsConnect() {
     }
     ws.onopen = function() {
         document.getElementById('status').innerHTML = "Status: conectado";
+        document.getElementById('status').style.color = "green";
         console.log("connected");
     }
     ws.onclose = function() {
         document.getElementById('status').innerHTML = "Status: sem conexão";
+        document.getElementById('status').style.color = "red";
         setTimeout(wsConnect,3000);
     }
+}
+
+function wsConnectConsultation() {
+  console.log("connect",wsUri);
+  ws = new WebSocket(wsUri);
+  ws.onmessage = function(msg) {
+      var data = JSON.parse(msg.data);
+      document.getElementById('rfid').innerHTML = data["rfid"];
+      document.getElementById('name').innerHTML = data["name"];
+      document.getElementById('gender').innerHTML = data["gender"];
+      document.getElementById('blood_type').innerHTML = data["blood_type"];
+      document.getElementById('patient').value = data["name"];
+    }
+    ws.onopen = function() {
+      document.getElementById('status').innerHTML = "Status: conectado";
+      document.getElementById('status').style.color = "green";
+      console.log("connected");
+  }
+  ws.onclose = function() {
+      document.getElementById('status').innerHTML = "Status: sem conexão";
+      document.getElementById('status').style.color = "red";
+      setTimeout(wsConnect,3000);
+  }
 }
 
 function generateProceduresTable(procedures){
