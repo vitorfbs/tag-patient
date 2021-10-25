@@ -6,28 +6,31 @@
         "blood_type": "A+",
         "history": [
             {
-                "medic": "José Doe",
+                "medic": "Doutor Estranho",
                 "specialty": "Otorrinolaringologista",
                 "date": "12/01/2022",
                 "time": "14:00"
             },
             {
-                "medic": "José Dornelli",
-                "specialty": "Otorrinolaringologista",
-                "date": "12/01/2022",
-                "time": "14:00"
+                "medic": "Doutor Destino",
+                "specialty": "Ortopedista",
+                "date": "05/07/2022",
+                "time": "11:00"
             }
         ],
         "exams": [
             {
+                "name": "Endoscopia por vídeo",
                 "file": "endoscopia.mpeg",
                 "date": "05/02/2012"
             },
             {
+                "name": "Biopsia tecido adiposo",
                 "file" : "biopsia.docx",
                 "date": "16/02/2012"
             },
             {
+                "name": "Examinação geral",
                 "file" : "consulta.pdf",
                 "date": "11/07/2019"
             }
@@ -48,31 +51,90 @@
         "name": "Vinicius Marino",
         "gender": "Masculino",
         "blood_type": "A-",
-        "diagnostics": {
-            "blood_type": "A+"
-        },
-        "history": {
-            "medic": "Joana Doe",
-            "specialty": "Dentista",
-            "date": "12/01/2022",
-            "time": "14:00"
-        }
+        "history": [
+            {
+                "medic": "José Doe",
+                "specialty": "Otorrinolaringologista",
+                "date": "12/01/2022",
+                "time": "14:00"
+            },
+            {
+                "medic": "José Dornelli",
+                "specialty": "Otorrinolaringologista",
+                "date": "12/01/2022",
+                "time": "14:00"
+            }
+        ],
+        "exams": [
+            {
+                "name": "Endoscopia por vídeo",
+                "file": "endoscopia.mpeg",
+                "date": "05/02/2012"
+            },
+            {
+                "name": "Biopsia tecido adiposo",
+                "file" : "biopsia.docx",
+                "date": "16/02/2012"
+            },
+            {
+                "name": "Examinação geral",
+                "file" : "consulta.pdf",
+                "date": "11/07/2019"
+            }
+        ],
+        "procedures": [
+            {
+                "name": "Remoção de cisto pilonidal",
+                "date": "09/02/2011"
+            },
+            {
+                "name" : "Correção de desvio de septo",
+                "date": "21/05/2020"
+            }
+        ]
     },
     {
-        "rfid": "DE1224F1Z4",
-        "name": "Regis Ximendes",
-        "gender": "Masculino",
-        "blood_type": "O+",
-        "diagnostics": {
-            "blood_type": "A+"
-        },
+        "blood_type": "A+",
         "history": [
-        {
-            "medic": "Van Helsing",
-            "specialty": "Neurologista",
-            "date": "12/01/2022",
-            "time": "14:00"
-        }
+            {
+                "medic": "José Doe",
+                "specialty": "Otorrinolaringologista",
+                "date": "12/01/2022",
+                "time": "14:00"
+            },
+            {
+                "medic": "José Dornelli",
+                "specialty": "Otorrinolaringologista",
+                "date": "12/01/2022",
+                "time": "14:00"
+            }
+        ],
+        "exams": [
+            {
+                "name": "Endoscopia por vídeo",
+                "file": "endoscopia.mpeg",
+                "date": "05/02/2012"
+            },
+            {
+                "name": "Biopsia tecido adiposo",
+                "file" : "biopsia.docx",
+                "date": "16/02/2012"
+            },
+            {
+                "name": "Examinação geral",
+                "file" : "consulta.pdf",
+                "date": "11/07/2019"
+            }
+        ],
+        "procedures": [
+            {
+                "name": "Remoção de cisto pilonidal",
+                "date": "09/02/2011"
+            },
+            {
+                "name" : "Correção de desvio de septo",
+                "date": "21/05/2020"
+            }
         ]
     }
 ]

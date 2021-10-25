@@ -14,38 +14,36 @@ function wsConnect() {
         document.getElementById('gender').innerHTML = data["gender"];
         document.getElementById('blood_type').innerHTML = data["blood_type"];
         generateHistoryTable(data["history"]);
-        
+        generateExamsTable(data["exams"]);
+        generateProceduresTable(data["exams"]);        
     }
     ws.onopen = function() {
-        // document.getElementById('status').innerHTML = "connected";
+        document.getElementById('status').innerHTML = "Status: conectado";
         console.log("connected");
     }
     ws.onclose = function() {
-        // document.getElementById('status').innerHTML = "not connected";
+        document.getElementById('status').innerHTML = "Status: sem conexão";
         setTimeout(wsConnect,3000);
     }
 }
 
-function generateExamsTable(history){
+function generateProceduresTable(procedures){
   console.log(history);
 
-  var body = document.getElementById("history_table");
+  var body = document.getElementById("procedures_table");
   body.innerHTML = "";
 
   // create elements <table> and a <tbody>
   var tbl = document.createElement("table");
   tbl.classList.add("table");
+  tbl.classList.add("table-striped");
+  tbl.classList.add("table-sm");
   
   var tableHeader = document.createElement("thead");
   var headerRow = document.createElement("tr");
 
   var header = document.createElement("th");
-  var headerText = document.createTextNode("Médico");
-  header.appendChild(headerText);
-  headerRow.appendChild(header);
-
-  var header = document.createElement("th");
-  var headerText = document.createTextNode("Especialidade");
+  var headerText = document.createTextNode("Nome");
   header.appendChild(headerText);
   headerRow.appendChild(header);
 
@@ -57,35 +55,86 @@ function generateExamsTable(history){
   tableHeader.appendChild(headerRow);
   tbl.appendChild(tableHeader);
 
-  var header = document.createElement("th");
-  var headerText = document.createTextNode("Hora");
-  header.appendChild(headerText);
-  headerRow.appendChild(header);
-
 
   var tblBody = document.createElement("tbody");
   
-  for (var i = 0; i < history.length; i++) {
+  for (var i = 0; i < procedures.length; i++) {
     // table row creation
     var row = document.createElement("tr");
 
       var cell = document.createElement("td");
-      var cellText = document.createTextNode(history[i]["medic"]);
+      var cellText = document.createTextNode(procedures[i]["name"]);
       cell.appendChild(cellText);
       row.appendChild(cell);
 
       var cell = document.createElement("td");
-      var cellText = document.createTextNode(history[i]["specialty"]);
+      var cellText = document.createTextNode(procedures[i]["date"]);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+
+    //row added to end of table body
+    tblBody.appendChild(row);
+  }
+
+  // append the <tbody> inside the <table>
+  tbl.appendChild(tblBody);
+  // put <table> in the <body>
+  body.appendChild(tbl);
+  // tbl border attribute to 
+  tbl.setAttribute("border", "2");
+}
+
+function generateExamsTable(exams){
+  var body = document.getElementById("exams_table");
+  body.innerHTML = "";
+
+  // create elements <table> and a <tbody>
+  var tbl = document.createElement("table");
+  tbl.classList.add("table");  
+  tbl.classList.add("table-striped");
+  tbl.classList.add("table-sm");
+
+  var tableHeader = document.createElement("thead");
+  var headerRow = document.createElement("tr");
+
+  var header = document.createElement("th");
+  var headerText = document.createTextNode("Nome");
+  header.appendChild(headerText);
+  headerRow.appendChild(header);
+
+  var header = document.createElement("th");
+  var headerText = document.createTextNode("Arquivo");
+  header.appendChild(headerText);
+  headerRow.appendChild(header);
+
+  var header = document.createElement("th");
+  var headerText = document.createTextNode("Data");
+  header.appendChild(headerText);
+  headerRow.appendChild(header);
+
+  tableHeader.appendChild(headerRow);
+  tbl.appendChild(tableHeader);
+
+  var tblBody = document.createElement("tbody");
+  
+  for (var i = 0; i < exams.length; i++) {
+    // table row creation
+    var row = document.createElement("tr");
+
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode(exams[i]["name"]);
       cell.appendChild(cellText);
       row.appendChild(cell);
 
       var cell = document.createElement("td");
-      var cellText = document.createTextNode(history[i]["date"]);
-      cell.appendChild(cellText);
+      var link = document.createElement("a");
+      var cellText = document.createTextNode(exams[i]["file"]);
+      link.appendChild(cellText);
+      cell.appendChild(link);
       row.appendChild(cell);
 
       var cell = document.createElement("td");
-      var cellText = document.createTextNode(history[i]["time"]);
+      var cellText = document.createTextNode(exams[i]["date"]);
       cell.appendChild(cellText);
       row.appendChild(cell);
 
@@ -110,6 +159,8 @@ function generateHistoryTable(history){
   // create elements <table> and a <tbody>
   var tbl = document.createElement("table");
   tbl.classList.add("table");
+  tbl.classList.add("table-striped");
+  tbl.classList.add("table-sm");
   
   var tableHeader = document.createElement("thead");
   var headerRow = document.createElement("tr");
