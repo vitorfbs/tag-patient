@@ -109,75 +109,14 @@
       <div id="history_table" class="table-responsive">
         
       </div>
+      <div id="test"></div>
     </main>
   </div>
 </div>
 
 
     <script src="/js/bootstrap.bundle.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        var ws;
-        var wsUri = "ws://127.0.0.1:1880/ws/simple";
-        var loc = window.location;
-        console.log(loc);
-        if (loc.protocol === "https:") { wsUri = "wss:"; }
-  
-        function wsConnect() {
-            console.log("connect",wsUri);
-            ws = new WebSocket(wsUri);
-            ws.onmessage = function(msg) {
-                var data = JSON.parse(msg.data);
-                console.log(data);
-                document.getElementById('rfid').innerHTML = data["rfid"];
-                document.getElementById('name').innerHTML = data["name"];
-                document.getElementById('gender').innerHTML = data["gender"];
-                document.getElementById('blood_type').innerHTML = data["blood_type"];
-                //body reference 
-                var body = document.getElementById("history_table");
-
-                // create elements <table> and a <tbody>
-                var tbl = document.createElement("table");
-                tbl.classList.add("table");
-                var tblBody = document.createElement("tbody");
-
-                // cells creation
-                for (var j = 0; j <= 2; j++) {
-                  // table row creation
-                  var row = document.createElement("tr");
-
-                  for (var i = 0; i < 2; i++) {
-                    // create element <td> and text node 
-                    //Make text node the contents of <td> element
-                    // put <td> at end of the table row
-                    var cell = document.createElement("td");
-                    var cellText = document.createTextNode("cell is row " + j + ", column " + i);
-
-                    cell.appendChild(cellText);
-                    row.appendChild(cell);
-                  }
-
-                  //row added to end of table body
-                  tblBody.appendChild(row);
-                }
-
-                // append the <tbody> inside the <table>
-                tbl.appendChild(tblBody);
-                // put <table> in the <body>
-                body.appendChild(tbl);
-                // tbl border attribute to 
-                tbl.setAttribute("border", "2");
-            }
-            ws.onopen = function() {
-                // document.getElementById('status').innerHTML = "connected";
-                console.log("connected");
-            }
-            ws.onclose = function() {
-                // document.getElementById('status').innerHTML = "not connected";
-                setTimeout(wsConnect,3000);
-            }
-        }
-    </script>
+    <script src="ws.js"></script>
   </body>
 </html>

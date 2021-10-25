@@ -4,15 +4,44 @@
         "name": "Vitor Ferreira",
         "gender": "Masculino",
         "blood_type": "A+",
-        "diagnostics": {
-            "blood_type": "A+"
-        },
-        "history": {
-            "medic": "José Doe",
-            "specialty": "Otorrinolaringologista",
-            "date": "12/01/2022",
-            "time": "14:00"
-        }
+        "history": [
+            {
+                "medic": "José Doe",
+                "specialty": "Otorrinolaringologista",
+                "date": "12/01/2022",
+                "time": "14:00"
+            },
+            {
+                "medic": "José Dornelli",
+                "specialty": "Otorrinolaringologista",
+                "date": "12/01/2022",
+                "time": "14:00"
+            }
+        ],
+        "exams": [
+            {
+                "file": "endoscopia.mpeg",
+                "date": "05/02/2012"
+            },
+            {
+                "file" : "biopsia.docx",
+                "date": "16/02/2012"
+            },
+            {
+                "file" : "consulta.pdf",
+                "date": "11/07/2019"
+            }
+        ],
+        "procedures": [
+            {
+                "name": "Remoção de cisto pilonidal",
+                "date": "09/02/2011"
+            },
+            {
+                "name" : "Correção de desvio de septo",
+                "date": "21/05/2020"
+            }
+        ]
     },
     {
         "rfid": "DE1224F1Z1",
@@ -37,11 +66,13 @@
         "diagnostics": {
             "blood_type": "A+"
         },
-        "history": {
+        "history": [
+        {
             "medic": "Van Helsing",
             "specialty": "Neurologista",
             "date": "12/01/2022",
             "time": "14:00"
         }
+        ]
     }
 ]
