@@ -1,7 +1,8 @@
 var ws;
-var wsUri = "ws://127.0.0.1:1880/ws/simple";
+var wsUri = "ws://127.0.0.1:1880/ws/health";
+
 var loc = window.location;
-console.log(loc);
+
 if (loc.protocol === "https:") { wsUri = "wss:"; }
 
 function wsConnect() {
